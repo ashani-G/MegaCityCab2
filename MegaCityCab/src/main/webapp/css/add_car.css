@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #000b33);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Add Car Form Container */
+.add-car-container {
+    width: 450px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+/* Form Title */
+h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #888;
+}
+
+/* Text Fields and Dropdowns */
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-bottom: 2px solid #dcdcdc;
+    background: transparent;
+    font-size: 14px;
+    color: #000;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-bottom: 2px solid #1a1a2e;
+}
+
+/* Buttons */
+.add-btn, .back-btn {
+    background: #1a1a2e;
+    color: #fff;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 10px;
+}
+
+.add-btn:hover {
+    background: #16213e;
+}
+
+/* Back Button */
+.back-btn {
+    background: #888;
+}
+
+.back-btn:hover {
+    background: #555;
+}
+
+/* Error Message */
+.error-msg {
+    color: #e74c3c;
+    font-size: 14px;
+    text-align: center;
+    background: rgba(231, 76, 60, 0.1);
+    padding: 8px;
+    border-radius: 6px;
+}
