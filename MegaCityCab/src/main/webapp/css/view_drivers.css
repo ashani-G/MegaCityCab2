@@ -3,13 +3,14 @@
 /* General Page Styling */
 body {
     font-family: 'Arial', sans-serif;
-    background: url('../images/driver-management-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(135deg, #ffffff, #000b33);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
 }
+
 
 /* Driver Management Container */
 .driver-management-container {

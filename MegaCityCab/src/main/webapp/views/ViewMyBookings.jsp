@@ -8,14 +8,14 @@
 <html lang="en">
 <head>
     <title>My Bookings</title>
-    <link rel="stylesheet" href="../css/ViewMyBookings.css"> 
+    <link rel="stylesheet" href="../css/ViewMybookings.css">
 </head>
 <body>
 
     <div class="my-bookings-container">
         <!-- Back Button Positioned at the Top Left -->
         <div class="back-button-container">
-            <button class="back-button" type="button" onclick="window.location.href='dashboard.jsp'">Back</button>
+            <button class="back-button" type="button" onclick="window.location.href='/MegaCityCab/views/homedashboard.jsp'">Back</button>
         </div>
 
         <h2>My Bookings</h2>
@@ -25,7 +25,6 @@
             User loggedInUser = (User) session.getAttribute("user");
 
             // Debugging: Print the session info
-            System.out.println("Session ID: " + session.getId());
             if (loggedInUser != null) {
                 System.out.println("User " + loggedInUser.getUsername());
             } else {
@@ -50,7 +49,7 @@
                 } else {
                 %>
                     <div class="table-container">
-                        <table>
+                        <table class="bookings-table">
                             <thead>
                                 <tr>
                                     <th>Booking ID</th>
@@ -58,7 +57,6 @@
                                     <th>Destination</th>
                                     <th>Fare (Rs)</th>
                                     <th>Status</th>
-                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -72,14 +70,6 @@
                                     <td><%= b.getDestination() %></td>
                                     <td>Rs <%= b.getFare() %></td>
                                     <td><%= b.getStatus() %></td>
-                                    <td>
-                                        <% if ("Pending".equals(b.getStatus())) { %>
-                                            <a href="UpdateBookingServlet?bookingId=<%= b.getBookingId() %>&status=Completed" class="action-btn complete">Complete</a>
-                                            <a href="CancelBookingServlet?bookingId=<%= b.getBookingId() %>" class="action-btn cancel">Cancel</a>
-                                        <% } else { %>
-                                            <span class="no-actions">No Actions</span>
-                                        <% } %>
-                                    </td>
                                 </tr>
                                 <% 
                                     } 

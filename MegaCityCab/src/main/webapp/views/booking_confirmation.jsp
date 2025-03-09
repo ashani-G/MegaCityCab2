@@ -127,7 +127,7 @@ p {
             %>
 
             <!-- Button to go back to home.jsp -->
-            <a href="home.jsp">
+            <a href="/MegaCityCab/views/homedashboard.jsp">
                 <button class="home-btn">Go to Home</button>
             </a>
         </div>
