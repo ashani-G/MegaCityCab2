@@ -1,113 +1,170 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="model.Car" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Car</title>
     <link rel="stylesheet" href="../css/UpdateCar.css">
-    <style type="text/css">
-    /* Reset default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
+<style>
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #292929; /* Dark background */
-    color: #ffffff; /* White text */
-    margin: 20px;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
-h2 {
-    color: #ffffff;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-form {
-    background-color: #2f7585; /* Deep teal for the form */
-    padding: 20px;
+/* Container for main content */
+.container {
+    width: 70%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
     border-radius: 8px;
-    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h2 {
+    font-size: 32px;
+    color: #2c3e50;
+}
+
+/* Form Section */
+.update-car-form {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+.form-group {
+    margin-bottom: 20px;
 }
 
 label {
-    color: #ffffff;
-    font-size: 1rem;
-    margin-right: 10px;
     display: block;
+    font-size: 16px;
+    color: #2c3e50;
     margin-bottom: 5px;
 }
 
-input[type="text"], input[type="number"], select {
+input, select {
     width: 100%;
     padding: 10px;
+    font-size: 16px;
     border-radius: 5px;
-    border: 1px solid #8d8d8d; /* Light gray border */
-    background-color: #ffffff;
-    color: #292929;
-    font-size: 1rem;
-    margin-bottom: 15px;
+    border: 1px solid #ccc;
 }
 
-button {
-    background-color: #20515d; /* Dark greenish blue */
-    color: #ffffff;
-    padding: 10px 15px;
+.form-actions {
+    text-align: center;
+}
+
+.submit-button {
+    background-color: #3498db; /* Blue */
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #2f7585; /* Lighter teal on hover */
+.submit-button:hover {
+    background-color: #2980b9;
 }
 
-form div {
-    margin-bottom: 20px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h2 {
+        font-size: 28px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input, select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .submit-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
 }
 
-select {
-    background-color: #ffffff;
-    color: #292929;
-    padding: 10px;
-}
+</style>
 
-button {
-    font-size: 1rem;
-    cursor: pointer;
-}
-    
-    </style>
 </head>
 <body>
-    <h2>Update Car</h2>
-    <form action="/MegaCityCab/UpdateCarServlet" method="POST">
-        <input type="hidden" name="car_id" value="<%= ((Car) request.getAttribute("car")).getCarId() %>">
-        
-        <label for="car_model">Car Model:</label>
-        <input type="text" name="car_model" value="<%= ((Car) request.getAttribute("car")).getCarModel() %>" required><br>
-        
-        <label for="car_number">Car Number:</label>
-        <input type="text" name="car_number" value="<%= ((Car) request.getAttribute("car")).getCarNumber() %>" required><br>
-        
-        <label for="car_type">Car Type:</label>
-        <input type="text" name="car_type" value="<%= ((Car) request.getAttribute("car")).getCarType() %>" required><br>
-        
-        <label for="capacity">Capacity:</label>
-        <input type="number" name="capacity" value="<%= ((Car) request.getAttribute("car")).getCapacity() %>" required><br>
-        
-        <label for="status">Status:</label>
-        <select name="status">
-            <option value="Available" <% if ("Available".equals(((Car) request.getAttribute("car")).getStatus())) out.print("selected"); %>>Available</option>
-            <option value="In Use" <% if ("In Use".equals(((Car) request.getAttribute("car")).getStatus())) out.print("selected"); %>>In Use</option>
-            <option value="Under Maintenance" <% if ("Under Maintenance".equals(((Car) request.getAttribute("car")).getStatus())) out.print("selected"); %>>Under Maintenance</option>
-        </select><br>
-        
-        <button type="submit">Update Car</button>
-    </form>
+
+    <div class="container">
+        <header>
+            <h2>Update Car Details</h2>
+        </header>
+
+        <section class="update-car-form">
+            <form action="/MegaCityCab/UpdateCarServlet" method="POST">
+                <input type="hidden" name="car_id" value="<%= ((Car) request.getAttribute("car")).getCarId() %>">
+
+                <div class="form-group">
+                    <label for="car_model">Car Model:</label>
+                    <input type="text" name="car_model" value="<%= ((Car) request.getAttribute("car")).getCarModel() %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="car_number">Car Number:</label>
+                    <input type="text" name="car_number" value="<%= ((Car) request.getAttribute("car")).getCarNumber() %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="car_type">Car Type:</label>
+                    <input type="text" name="car_type" value="<%= ((Car) request.getAttribute("car")).getCarType() %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="capacity">Capacity:</label>
+                    <input type="number" name="capacity" value="<%= ((Car) request.getAttribute("car")).getCapacity() %>" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="status">Status:</label>
+                    <select name="status">
+                        <option value="Available" <% if ("Available".equals(((Car) request.getAttribute("car")).getStatus())) out.print("selected"); %>>Available</option>
+                        <option value="In Use" <% if ("In Use".equals(((Car) request.getAttribute("car")).getStatus())) out.print("selected"); %>>In Use</option>
+                        <option value="Under Maintenance" <% if ("Under Maintenance".equals(((Car) request.getAttribute("car")).getStatus())) out.print("selected"); %>>Under Maintenance</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-button">Update Car</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
 </body>
 </html>

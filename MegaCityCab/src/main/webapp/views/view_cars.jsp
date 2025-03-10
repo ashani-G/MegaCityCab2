@@ -9,11 +9,7 @@
 <body>
 
     <div class="car-management-container">
-        <!-- Back Button Positioned at the Top Left -->
-        <div class="back-button-container">
-            <button class="back-button" type="button" onclick="window.location.href='managerdashboard.jsp'">Back</button>
-        </div>
-
+       
         <h2>Car List</h2>
 
         <div class="table-container">

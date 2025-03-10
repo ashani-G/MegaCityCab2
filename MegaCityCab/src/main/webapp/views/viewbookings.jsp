@@ -11,10 +11,6 @@
 <body>
 
     <div class="bookings-container">
-        <!-- Back Button Positioned at the Top Left -->
-        <div class="back-button-container">
-            <button class="back-button" type="button" onclick="window.location.href='managerdashboard.jsp'">Back</button>
-        </div>
 
         <h2>Customer Bookings</h2>
 
@@ -38,7 +34,7 @@
                         <th>Customer Name</th>
                         <th>Pickup Location</th>
                         <th>Destination</th>
-                        <th>Amount (Rs)</th>
+                        <th>fare (Rs)</th>
                         <th>Status</th>
                     </tr>
                 </thead>
