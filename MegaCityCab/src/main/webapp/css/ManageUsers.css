@@ -1,0 +1,168 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #000b33);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container for main content */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h2 {
+    font-size: 36px;
+    color: #2c3e50;
+}
+
+header p {
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+/* Add User Form Section */
+.add-user-form {
+    margin-bottom: 40px;
+}
+
+.add-user-form h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.add-user-form .form-group {
+    margin-bottom: 20px;
+}
+
+.add-user-form label {
+    display: block;
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+.add-user-form input, .add-user-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.add-user-form .form-actions {
+    text-align: center;
+}
+
+.submit-button {
+    background-color: #3498db; /* Blue */
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #2980b9;
+}
+
+/* Existing Users Table Section */
+.existing-users h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #2980b9;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+.action-button {
+    text-decoration: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.update-button {
+    background-color: #2ecc71; /* Green */
+    color: white;
+    margin-right: 10px;
+}
+
+.update-button:hover {
+    background-color: #27ae60;
+}
+
+.delete-button {
+    background-color: #e74c3c; /* Red */
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header h2 {
+        font-size: 28px;
+    }
+
+    .add-user-form label,
+    .add-user-form input,
+    .add-user-form select {
+        font-size: 14px;
+    }
+
+    .submit-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,114 @@
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #000b33);
+    margin: 0;
+    padding: 0;
+}
+
+/* My Bookings Container */
+.my-bookings-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Back Button */
+.back-button-container {
+    margin-bottom: 20px;
+}
+
+.back-button {
+    background-color: #4b4c5b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #219150; /* Darker Green */
+}
+
+/* Main Heading */
+h2 {
+    font-size: 36px;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Error Message */
+.error-msg {
+    text-align: center;
+    color: red;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* No Bookings Message */
+.no-bookings-msg {
+    text-align: center;
+    color: #888;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Table Styling */
+.table-container {
+    overflow-x: auto;
+}
+
+.bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bookings-table thead {
+    background-color: #2980b9; /* Blue */
+    color: #fff;
+}
+
+.bookings-table th, .bookings-table td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.bookings-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light Gray for alternating rows */
+}
+
+.bookings-table tr:hover {
+    background-color: #f39c12; /* Hover Effect - Orange */
+    color: #fff;
+}
+
+.bookings-table td {
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .bookings-table th, .bookings-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .back-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+}

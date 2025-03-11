@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #000b33);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+/* Bookings Container */
+.bookings-container {
+    width: 700px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+/* Back Button */
+.back-button-container {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.back-button {
+    background: #888;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background: #555;
+}
+
+/* Page Title */
+h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+}
+
+/* No Bookings Message */
+.no-bookings-msg {
+    color: #e74c3c;
+    font-size: 14px;
+    text-align: center;
+    background: rgba(231, 76, 60, 0.1);
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* Table Styling */
+.table-container {
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #1a1a2e;
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Action Buttons */
+.action-btn {
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.complete {
+    background: #27ae60;
+    color: white;
+}
+
+.complete:hover {
+    background: #219150;
+}
+
+.cancel {
+    background: #e74c3c;
+    color: white;
+}
+
+.cancel:hover {
+    background: #c0392b;
+}
+
+/* No Actions */
+.no-actions {
+    font-size: 12px;
+    color: #888;
+    font-weight: bold;
+}
