@@ -1,3 +1,26 @@
+@charset "UTF-8";
+
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffffff, #000b33);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Add Car Form Container */
+.add-car-container {
+    width: 450px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
 
 /* Form Title */
 h2 {
